@@ -9,15 +9,19 @@ fixture`Getting Started`
 
 test('The user removes item from the shopping cart', async t => {
     await t.navigateTo('http://automationpractice.com/index.php')
-    await MainPage.clickdressesTab()
+    await MainPage.clickDressesTab()
     await MainPage.clickGridView()
     await DressesPage.hoverPrintedChiffon()
     await DressesPage.clickAddToCart2()
     await DressesPage.clickContinueShop()
     await DressesPage.hoverPrintedDress()
     await DressesPage.clickAddToCart()
+    await DressesPage.clickContinueShop()
+    await MainPage.validateNumberProductsCart()
     await MainPage.hoverShoppingCart()
     await MainPage.clickRemoveBtn()
+    await MainPage.validateNumberProductsCart()
+    await MainPage.clickShoppingCartBtn()
 
 });
 

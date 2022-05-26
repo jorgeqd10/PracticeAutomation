@@ -2,14 +2,13 @@ import { t, Selector } from "testcafe"
 
 class CartPage {
     constructor() {
+        this.emptyCartLbl = Selector('#center_column > p')
 
     }
 
-    emptyCartMsg = async () => {
-        await t.expect('Your shopping cart is empty.').eql('Your shopping cart is empty.', 'message displayed is wrong')
+    validateEmptyCartMsg = async () => {
+        await t.expect(this.emptyCartLbl.innerText).contains("Your shopping cart is empty.")
     }
-
-
 }
 
 export default new CartPage()
