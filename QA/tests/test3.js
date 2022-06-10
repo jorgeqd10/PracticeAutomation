@@ -1,6 +1,6 @@
 import { t } from 'testcafe'
 import MainPage from '../po/MainPage.po'
-const dataSet = require('../data/data4.json')
+const dataSet = require('../data/data4.json') //Retrieving data from data3.json file
 
 fixture`Getting Started`
     .page`http://automationpractice.com/index.php`

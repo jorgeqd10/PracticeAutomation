@@ -7,11 +7,11 @@ fixture`Getting Started`
     .disablePageCaching;
 
 test('The user is able to add items to the shopping cart in the list view', async t => {
-    await t.navigateTo('http://automationpractice.com/index.php')
     await MainPage.clickDressesTab()
     await MainPage.clickListView()
+    let dressText = MainPage.getTitle2Row() //getting label dress displayed into 2nd Dress image displayed on list view
     await DressesPage.clickAddToCart()
     await DressesPage.addedSuccessMsg()
-    await DressesPage.clickPrintedDress()
+    await DressesPage.clickPrintedDress(dressText)
 });
 

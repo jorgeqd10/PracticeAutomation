@@ -6,7 +6,7 @@ try {
     const runner = testcafe.createRunner();
 
     const failedCount = await runner
-        .src(["./QA/tests/test1.js"])
+        .src(["./QA/tests/test*.js"])
         .browsers(["Chrome"])
         .run();
     console.log("Tests failed:" + failedCount);

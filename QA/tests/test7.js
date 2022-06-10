@@ -10,7 +10,6 @@ fixture`Getting Started`
 
 dataSet.forEach(data => {
     test('Working with json file data driven ', async t => {
-        //    await t.navigateTo('https://the-internet.herokuapp.com/login')
         await DressesPage.enterUserName(data.username)
         await DressesPage.enterPassword(data.password)
         await DressesPage.clickLogin()

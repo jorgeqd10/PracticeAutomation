@@ -8,7 +8,6 @@ fixture`Getting Started`
     .disablePageCaching;
 
 test('The user removes item from the shopping cart', async t => {
-    await t.navigateTo('http://automationpractice.com/index.php')
     await MainPage.clickDressesTab()
     await MainPage.clickGridView()
     await DressesPage.hoverPrintedChiffon()
